@@ -14,7 +14,7 @@
 ## 全局配置
 1. 配置用户名 git config --global user.name "你的git名称"
 2. 配置邮箱   git config --global user.email "你的git验证邮箱"
-3. 
+3. 一台电脑配置一次就可以了
 4. 查看你的配置信息 git config --list
 
 ## 初始化
