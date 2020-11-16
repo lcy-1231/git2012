@@ -72,6 +72,19 @@
 9. git fetch origin dev 更新代码到本地，不会合并到当前分支
 10. git merge FETCH_HEAD 把FETCH_HEAD合并到当前分支
 
+## 添加协作者
+1. 当前项目位置 有一个setting 点击
+2. 选择 Manage access
+3. 点击 Invite a collaborator 添加协作者
+4. 受邀人收到邮件后点击接受邀请
+
+## 配合ssh密钥
+1. 生成密钥：ssh-Keygen -t rsa -C '你的邮箱地址'
+2. 找到 .ssh 目录下的 ic
+3. 拖到编辑器中打开并复制
+4. github头像 ->setting
+
+
 
 1-test分支的代码 要提交
 
