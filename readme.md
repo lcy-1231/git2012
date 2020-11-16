@@ -48,6 +48,8 @@
 3. 命令 git remote add origin 远程仓库地址 ->本地仓库和远程仓库关联  (origin变量，指向远程地址)
 4. 命令 git remote -v 查看本地仓库
 5. 命令 git push -u origin master(主干，主分支) 
+  git push 把本地仓库推送到远程仓库
+  -u origin master  ->设置默认提交master分支到origin
 
 
 
