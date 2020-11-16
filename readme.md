@@ -66,7 +66,8 @@
 3. 创建分支 git branch 分支名
 4. 切换分支 git checkout 分支名
 5. 切换分支之后，工作区显示的是 当前分支的代码
-
+6. 合并分支 git merge test
+7. 删除分支 git branch -d test
 
 test分支的代码 要提交
 
@@ -74,3 +75,4 @@ test分支的代码 要提交
 
 
 没修改不让提交
+我是test新增的功能！！！我的master还能回来吗？？
