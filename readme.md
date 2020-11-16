@@ -41,3 +41,14 @@
 
 
 第XX版本
+
+## 将本地仓库提交到远程仓库
+1. 在github创建一个远程仓库 git2010
+2. 本地工作区先提交到本地仓库
+3. 命令 git remote add origin 远程仓库地址 ->本地仓库和远程仓库关联  (origin变量，指向远程地址)
+4. 命令 git remote -v 查看本地仓库
+5. 命令 git push -u origin master(主干，主分支) 
+
+
+
+
