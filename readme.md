@@ -6,6 +6,7 @@
 1. 在电脑上创建一个文件夹作为工作区
 2. 打开文件夹右键 git base here 进入当前目录
 3. 工作区持有项目实际文件
+4. 暂存区和本地仓库 不需要我们操作
 
 ## readme 文档
 1. readme 文件可以是txt文档，也可以是md文档
@@ -45,18 +46,20 @@
 ## 将本地仓库提交到远程仓库
 1. 在github创建一个远程仓库 git2010
 2. 本地工作区先提交到本地仓库
-3. 命令 git remote add origin 远程仓库地址 ->本地仓库和远程仓库关联  (origin变量，指向远程地址)
+3. 命令 git remote add origin https远程仓库地址 ->本地仓库和远程仓库关联  (origin变量，指向远程地址)
 4. 命令 git remote -v 查看本地仓库
-5. 命令 git push -u origin master(主干，主分支) 
+5. 命令 git push -u origin master(主干，主分支) 第一次执行
   git push 把本地仓库推送到远程仓库
   -u origin master  ->设置默认提交master分支到origin
+6. git push -u -f origin master 强制推送到远程，不推荐！！
 
 ## 下载项目到本地
-1. 克隆项目: git clone 地址
-2. cd GP03-test/ 有master 直接是一个版本库了
+1. 克隆项目: git clone 项目远程仓库地址 整个版本库克隆下来
+2. 例子: cd GP03-test/ 有master 直接是一个版本库了
 3. git clone 适用于本地没有该项目，直接从远程下载到本地
-4. 如果本地有该项目，应该直接更新到本地 git pull
-5. 一定要先把工作区的修改提交到本地在仓库再更新远程到本地
+4. 一定要先把工作区的修改提交到本地在仓库再更新远程到本地
+5. 如果本地有该项目，应该直接更新到本地 git pull
+6. git fetch 将远程更新到本地
 
 我在远程仓库修改的这句话 
 
@@ -65,9 +68,9 @@
 2. 当前分支前面带有 星号 *
 3. 创建分支 git branch 分支名
 4. 切换分支 git checkout 分支名
-5. 切换分支之后，工作区显示的是 当前分支的代码
-6. 合并分支 git merge test
-7. 删除分支 git branch -d test
+5. 切换分支之后，工作区的代码自动切换到对应分支的代码
+6. 合并分支 git merge test 把test分支合并到当前分支
+7. 删除分支 git branch -d 分支名
 8. git pull origin dev 更新代码到本地，自动合并到当前分支
 9. git fetch origin dev 更新代码到本地，不会合并到当前分支
 10. git merge FETCH_HEAD 把FETCH_HEAD合并到当前分支
@@ -80,14 +83,17 @@
 
 ## 配合ssh密钥
 1. 生成密钥：ssh-Keygen -t rsa -C '你的邮箱地址'
-2. 找到 .ssh 目录下的 ic
+2. 找到 .ssh 目录下的 id_rsa.pub 文件
 3. 拖到编辑器中打开并复制
-4. github头像 ->setting
-5. 
+4. github头像 ->settings
+5. 选择SSH keys
 6. new SSH key
 7. 粘贴复制的id_rsa.pub文件的内容
 8. 点击 add ssh key
-9. 
+9. 本地仓库和远程仓库关联(使用ssh地址)
+10. 重新配置origin
+11. 删除原来的配置 git remote rm origin
+12. 添加新的关联 git remote add origin ssh地址
 
 ## git忽略列表
 1. 创建文件 .gitignore
