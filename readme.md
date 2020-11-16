@@ -83,6 +83,19 @@
 2. 找到 .ssh 目录下的 ic
 3. 拖到编辑器中打开并复制
 4. github头像 ->setting
+5. 
+6. new SSH key
+7. 粘贴复制的id_rsa.pub文件的内容
+8. 点击 add ssh key
+9. 
+
+## git忽略列表
+1. 创建文件 .gitignore
+2. 忽略文件列表
+3. 在忽略列表中列出不需要提交到版本库的文件及目录
+
+
+ 
 
 
 
